@@ -3,256 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>האתר של Julio Silva</title>
+    <title>אתר Julio</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* כלליים */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-            background-color: #f4f4f4;
-        }
-
-        /* Header */
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .header img {
-            width: 200px;
-            height: auto;
-        }
-
-        .header h1 {
-            font-size: 3em;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-
-        /* Navigation Bar */
-        .navbar ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .navbar ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        .navbar ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        /* Home Section */
-        .home-section {
-            background-color: #008CBA;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .home-section h1 {
-            font-size: 2.5em;
-        }
-
-        .home-section button {
-            background-color: #fff;
-            color: #008CBA;
-            padding: 10px 20px;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .home-section button:hover {
-            background-color: #ddd;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 50px 20px;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .about-section h2 {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-
-        .about-section p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        /* Services Section */
-        .services-section {
-            background-color: #e2e2e2;
-            padding: 50px 20px;
-        }
-
-        .services-section h2 {
-            text-align: center;
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-
-        .service-item {
-            margin: 20px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        /* Social Media Section */
-        .social-media {
-            text-align: center;
-            padding: 30px;
-            background-color: #333;
-            color: white;
-        }
-
-        .social-media img {
-            width: 50px;
-            height: auto;
-            margin: 0 10px;
-        }
-
-        .social-media a {
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 50px 20px;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-
-        .contact-section form input, .contact-section form textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .contact-section form button {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .contact-section form button:hover {
-            background-color: #444;
-        }
-
-        /* Footer Section */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        .footer p {
-            font-size: 1em;
-        }
-        
-        /* Logo for TikTok - Smaller */
-        .social-media img.tiktok-logo {
-            width: 25px; /* Smaller size for TikTok */
-        }
-    </style>
 </head>
 <body>
-
     <!-- Header -->
-    <div class="header">
-        <img src="discord-logo.png" alt="Logo">
-        <h1>ברוך הבא לאתר של Julio Silva</h1>
-    </div>
-
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <ul>
-            <li><a href="#home">דף הבית</a></li>
-            <li><a href="#about">אודות</a></li>
-            <li><a href="#services">שירותים</a></li>
-            <li><a href="#contact">צור קשר</a></li>
-        </ul>
-    </div>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="לוגו האתר" width="50" height="50">
+            Julio
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">בית</a></li>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#services">שירותים</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Home Section -->
-    <div class="home-section" id="home">
-        <h1>ברוך הבא לאתר של Julio Silva</h1>
+    <section id="home" class="home-section">
+        <h1>ברוך הבא לאתר שלי</h1>
         <button>התחל עכשיו</button>
-    </div>
+    </section>
 
     <!-- About Section -->
-    <div class="about-section" id="about">
+    <section id="about" class="about-section">
         <h2>אודות</h2>
-        <p>כאן תוכל ללמוד עוד על Julio Silva ומה שאני מציע. כל מה שאתה צריך לדעת על פרויקטים ושירותים שאני מספק.</p>
-    </div>
+        <p>שלום! אני Julio, ואני יוצר תוכן בתחום...</p>
+    </section>
 
     <!-- Services Section -->
-    <div class="services-section" id="services">
+    <section id="services" class="services-section">
         <h2>השירותים שלי</h2>
         <div class="service-item">
-            <h3>שירות 1</h3>
-            <p>תיאור השירות הראשון.</p>
+            <img src="discord-logo.png" alt="Discord" width="50" height="50">
+            <p>Discord</p>
         </div>
         <div class="service-item">
-            <h3>שירות 2</h3>
-            <p>תיאור השירות השני.</p>
+            <img src="youtube-logo.png" alt="YouTube" width="50" height="50">
+            <p>YouTube</p>
         </div>
-    </div>
-
-    <!-- Social Media Section -->
-    <div class="social-media">
-        <a href="https://discord.gg/TfnRUxH8Yz"><img src="discord-logo.png" alt="Discord Logo"></a>
-        <a href="https://www.youtube.com/@Juliostime"><img src="youtube-logo.png" alt="YouTube Logo"></a>
-        <a href="https://www.tiktok.com/@julio._.s"><img class="tiktok-logo" src="tiktok-logo.png" alt="TikTok Logo"></a>
-        <a href="https://www.instagram.com/nave_b1936/"><img src="instegram-logo.png" alt="Instagram Logo"></a>
-    </div>
+        <div class="service-item">
+            <img src="tiktok-logo.png" alt="TikTok" width="50" height="50">
+            <p>TikTok</p>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-    <div class="contact-section" id="contact">
+    <section id="contact" class="contact-section">
         <h2>צור קשר</h2>
-        <form action="#">
-            <input type="text" placeholder="שם מלא" required><br>
-            <input type="email" placeholder="אימייל" required><br>
-            <textarea placeholder="הודעה" required></textarea><br>
+        <form action="" method="post">
+            <label for="name">שם מלא</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">אימייל</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">הודעה</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label for="instagram-verification">אני מאמת את כתובת האימייל שלי עבור אינסטגרם:</label>
+            <input type="checkbox" id="instagram-verification" name="instagram-verification" required>
+            <span>סמן כדי לאמת את האימייל</span>
+
             <button type="submit">שלח</button>
         </form>
-    </div>
 
-    <!-- Footer Section -->
-    <div class="footer">
-        <p>&copy; 2025 כל הזכויות שמורות. האתר נבנה ותוכנת על ידי חוליו.</p>
-    </div>
-
+        <div class="social-links">
+            <a href="https://discord.gg/TfnRUxH8Yz" class="social-link discord">Discord</a>
+            <a href="https://www.youtube.com/@Juliostime" class="social-link youtube">YouTube</a>
+            <a href="https://www.tiktok.com/@julio._.s" class="social-link tiktok">TikTok</a>
+            <a href="https://www.instagram.com/nave_b1936/" class="social-link instagram">Instagram (דרוש אימות אימייל)</a>
+        </div>
+    </section>
 </body>
 </html>
