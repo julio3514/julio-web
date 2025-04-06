@@ -113,6 +113,12 @@ body {
     color: #FFD700;
 }
 
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
 /* Contact Section */
 .contact-section {
     padding: 50px 20px;
