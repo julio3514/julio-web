@@ -6,321 +6,293 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    direction: rtl;
     line-height: 1.6;
 }
 
 /* Header */
 .header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #008CBA, #005f73);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.header .logo {
-    width: 50px;
+.header img:hover {
+    transform: scale(1.1);
 }
 
+.header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
 .navbar ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .navbar ul li {
-    margin: 0;
+    display: inline-block;
+    margin: 0 20px;
 }
 
 .navbar ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
 }
 
 .navbar ul li a:hover {
-    color: #f1c40f;
+    color: #ffcc00;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffcc00;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Home Section */
 .home-section {
-    background-color: #2980b9;
+    background-color: #008CBA;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
+    border-bottom: 5px solid #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.home-section h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
+.home-section h1 {
+    font-size: 3.5rem;
+    letter-spacing: 1px;
 }
 
-.home-section p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.home-section .btn {
-    background-color: #f1c40f;
-    color: #333;
-    padding: 15px 30px;
-    font-size: 18px;
+.home-section button {
+    background-color: #ffcc00;
+    color: #008CBA;
+    padding: 12px 24px;
     border: none;
+    font-size: 1.25rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
-.home-section .btn:hover {
-    background-color: #f39c12;
+.home-section button:hover {
+    background-color: #ff9900;
+    color: #fff;
 }
 
 /* About Section */
 .about-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     background-color: #fff;
     text-align: center;
+    color: #333;
 }
 
 .about-section h2 {
-    font-size: 2.5em;
+    font-size: 3rem;
+    font-weight: bold;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #008CBA;
 }
 
 .about-section p {
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto 20px;
-}
-
-.about-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #666;
 }
 
 /* Services Section */
 .services-section {
+    background-color: #f9f9f9;
     padding: 60px 20px;
-    background-color: #ecf0f1;
 }
 
 .services-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: bold;
     text-align: center;
-}
-
-.services-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
+    color: #008CBA;
+    margin-bottom: 40px;
 }
 
 .service-item {
+    display: inline-block;
+    width: 45%;
+    margin: 15px 2.5%;
     background-color: #fff;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 220px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
     transform: translateY(-10px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.service-logo {
-    width: 50px;
+.service-item h3 {
+    font-size: 1.8rem;
     margin-bottom: 20px;
-}
-
-.service-item a {
-    color: #333;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.service-item a:hover {
-    color: #f1c40f;
+    color: #008CBA;
 }
 
 .service-item p {
-    font-size: 1em;
-    color: #7f8c8d;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+}
+
+.social-media img {
+    width: 60px;
+    height: auto;
+    margin: 0 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Contact Section */
 .contact-section {
+    padding: 80px 20px;
     background-color: #fff;
-    padding: 60px 20px;
     text-align: center;
 }
 
 .contact-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #008CBA;
 }
 
-.contact-section form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-section input,
-.contact-section textarea {
+.contact-section form input,
+.contact-section form textarea {
+    width: 70%;
     padding: 15px;
-    font-size: 1em;
-    border-radius: 5px;
+    margin: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
 }
 
-.contact-section button {
-    background-color: #2980b9;
-    color: #fff;
-    padding: 15px;
+.contact-section form button {
+    background-color: #008CBA;
+    color: white;
+    padding: 12px 20px;
     border: none;
-    font-size: 18px;
-    border-radius: 5px;
+    font-size: 1.25rem;
     cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.contact-section button:hover {
-    background-color: #3498db;
+.contact-section form button:hover {
+    background-color: #005f73;
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
     background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-/* כלליים */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    direction: rtl;
-    background-color: #f4f4f4;
-}
-
-/* כותרת האתר */
-.header {
-    background-color: #000;  /* צבע רקע שחור */
-    color: #ffcc00;  /* צבע טקסט צהוב */
-    padding: 20px;
-    text-align: center;
-    font-size: 2em;
-}
-
-/* כותרות של כל שירות (Discord, TikTok וכו') */
-.service-header {
-    font-size: 1.8em; /* גודל טקסט בכותרת */
-    font-weight: bold;
-    color: #ffcc00;  /* צבע צהוב */
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-/* עיצוב הלוגואים */
-.service-logo {
-    width: 100px;  /* גודל אחיד לכל הלוגואים */
-    height: 100px;  /* גובה אחיד */
-    margin: 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* עיצוב פרטי הקשר */
-.contact-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.contact-form button {
-    background-color: #ffcc00;  /* צהוב */
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-.contact-form button:hover {
-    background-color: #ff9900;  /* צהוב כהה */
-}
-
-/* עיצוב האזור של כל השירותים */
-.services-section {
-    background-color: #2f2f2f;  /* צבע רקע כהה */
-    padding: 40px 20px;
     color: white;
-}
-
-.service-item {
-    background-color: #333;  /* צבע רקע כהה */
-    padding: 20px;
-    border-radius: 8px;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    margin-top: 40px;
 }
 
-.service-item:hover {
-    background-color: #444;  /* שינוי צבע בעת ריחוף */
+/* Footer Text */
+.footer p {
+    font-size: 1.1rem;
 }
 
-/* שירותים */
-.services-section .service-item img {
-    width: 100px;  /* גודל אחיד לכל הלוגואים */
-    height: 100px;  /* גובה אחיד */
-    margin-bottom: 10px;
-}
+/* Mobile Adjustments */
+@media only screen and (max-width: 768px) {
+    .header img {
+        width: 120px;
+    }
 
-/* Footer */
-footer {
-    background-color: #000;  /* צבע רקע שחור */
-    color: #ffcc00;  /* צבע טקסט צהוב */
-    padding: 20px;
-    text-align: center;
-    font-size: 1em;
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .home-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-section h2,
+    .services-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .service-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .social-media img {
+        width: 50px;
+    }
+
+    .contact-section form input,
+    .contact-section form textarea {
+        width: 90%;
+    }
 }
