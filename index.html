@@ -1,44 +1,76 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>הרשתות החברתיות שלי</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אתר מתקדם - julio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>עקוב אחרי ברשתות החברתיות</h1>
-  </header>
 
-  <main>
-    <section id="social-links">
-      <!-- Discord Link -->
-      <a href="https://discord.gg/TfnRUxH8Yz" target="_blank">
-        <img src="discord-logo.png" alt="דיסקורד">
-      </a>
-      
-      <!-- YouTube Link -->
-      <a href="https://www.youtube.com/@Juliostime" target="_blank">
-        <img src="youtube-logo.png" alt="יוטיוב">
-      </a>
-      
-      <!-- TikTok Link -->
-      <a href="https://www.tiktok.com/@julio._.s" target="_blank">
-        <img src="tiktok-logo.png" alt="טיקטוק">
-      </a>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" width="100">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">בית</a></li>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#services">שירותים</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <!-- Instagram Link with Email Verification -->
-      <a href="https://www.instagram.com/nave_b1936/" target="_blank" onclick="alert('כדי לעקוב אחרי אינסטגרם, יש לבצע אימות באמצעות אימייל!')">
-        <img src="instagram-logo.png" alt="אינסטגרם">
-      </a>
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <h1>ברוך הבא לאתר שלנו!</h1>
+        <p>כאן תוכל למצוא את כל מה שאתה צריך לדעת עלינו ועל השירותים שלנו.</p>
+        <button onclick="window.location.href='#contact'">צור קשר</button>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 כל הזכויות שמורות.</p>
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>אודות</h2>
+        <p>החברה שלנו מספקת שירותים איכותיים ומקצועיים בתחומים שונים. אנחנו מתמקדים ביצירת חוויות ייחודיות ומותאמות אישית לכל לקוח.</p>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>השירותים שלנו</h2>
+        <div class="service-item">
+            <h3>שירות 1</h3>
+            <p>תיאור של השירות הראשון.</p>
+        </div>
+        <div class="service-item">
+            <h3>שירות 2</h3>
+            <p>תיאור של השירות השני.</p>
+        </div>
+        <div class="service-item">
+            <h3>שירות 3</h3>
+            <p>תיאור של השירות השלישי.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>צור קשר</h2>
+        <form>
+            <label for="name">שם:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">הודעה:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">שלח</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 כל הזכויות שמורות ל-Julio</p>
+    </footer>
+
 </body>
 </html>
