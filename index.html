@@ -1,89 +1,102 @@
 <!DOCTYPE html>
 <html lang="he">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אתר Julio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>אתר מקצועי שלי</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/discord-logo.png"> <!-- לוגו האתר -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- פונט מותאם -->
 </head>
+
 <body>
-
-    <!-- Header -->
-    <div class="header">
-        <img src="images/discord-logo.png" alt="לוגו האתר" width="50" height="auto">
-        <div class="navbar">
-            <ul>
-                <li><a href="#home">בית</a></li>
-                <li><a href="#about">עלינו</a></li>
-                <li><a href="#services">שירותים</a></li>
-                <li><a href="#contact">צור קשר</a></li>
-            </ul>
+    <header class="header">
+        <div class="container">
+            <img src="images/discord-logo.png" alt="לוגו האתר" class="logo"> <!-- לוגו -->
+            <h1>ברוכים הבאים לאתר שלי</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">בית</a></li>
+                    <li><a href="#about">עלינו</a></li>
+                    <li><a href="#services">שירותים</a></li>
+                    <li><a href="#contact">צור קשר</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <!-- Home Section -->
-    <div class="home-section" id="home">
-        <h1>ברוכים הבאים לאתר Julio</h1>
-        <button onclick="window.location.href='https://discord.gg/TfnRUxH8Yz'">הצטרף לדיסקורד</button>
-    </div>
+    <section id="home" class="home-section">
+        <div class="container">
+            <h2>ברוכים הבאים!</h2>
+            <p>הגעת למקום הנכון. האתר שלנו מציע שירותים ברמה גבוהה!</p>
+            <button class="btn primary-btn">התחל כאן</button>
+        </div>
+    </section>
 
-    <!-- About Section -->
-    <div class="about-section" id="about">
-        <h2>עלינו</h2>
-        <p>אנו מספקים מגוון שירותים ברשתות חברתיות ובפלטפורמות שונות.</p>
-    </div>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>עלינו</h2>
+            <p>אנו מציעים מגוון שירותים לעסקים וללקוחות פרטיים. הצטרפו אלינו עכשיו ותקבלו שירות מקצועי ואמין.</p>
+            <img src="images/about-image.jpg" alt="תמונה עלינו" class="about-image">
+        </div>
+    </section>
 
-    <!-- Services Section -->
-    <div class="services-section" id="services">
-        <h2>שירותים</h2>
-        <div class="service-item">
-            <img src="images/discord-icon.png" alt="דיסקורד" class="social-icon">
-            <h3>דיסקורד</h3>
-            <a href="https://discord.gg/TfnRUxH8Yz" target="_blank">הצטרף אלינו בדיסקורד</a>
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>שירותים שלנו</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="images/discord-logo.png" alt="לוגו דיסקורד" class="service-logo">
+                    <a href="https://discord.gg/TfnRUxH8Yz" target="_blank">דיסקורד</a>
+                    <p>צור קשר עם קהילתנו ב-Discord!</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/youtube-logo.png" alt="לוגו יוטיוב" class="service-logo">
+                    <a href="https://www.youtube.com/@Juliostime" target="_blank">יוטיוב</a>
+                    <p>הצטרפו לערוץ שלנו ביוטיוב!</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/tiktok-logo.png" alt="לוגו טיקטוק" class="service-logo">
+                    <a href="https://www.tiktok.com/@julio._.s" target="_blank">טיקטוק</a>
+                    <p>עקבו אחרינו בטיקטוק!</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/instagram-logo.png" alt="לוגו אינסטגרם" class="service-logo">
+                    <a href="https://www.instagram.com/nave_b1936/" target="_blank">אינסטגרם</a>
+                    <p>עקבו אחרינו באינסטגרם! (לאחר אימות עם אימייל)</p>
+                </div>
+            </div>
         </div>
-        <div class="service-item">
-            <img src="images/youtube-icon.png" alt="יוטיוב" class="social-icon">
-            <h3>יוטיוב</h3>
-            <a href="https://www.youtube.com/@Juliostime" target="_blank">עקוב אחרינו ביוטיוב</a>
-        </div>
-        <div class="service-item">
-            <img src="images/tiktok-icon.png" alt="טיקטוק" class="social-icon">
-            <h3>טיקטוק</h3>
-            <a href="https://www.tiktok.com/@julio._.s" target="_blank">עקוב אחרינו בטיקטוק</a>
-        </div>
-        <div class="service-item">
-            <img src="images/instagram-icon.png" alt="אינסטגרם" class="social-icon">
-            <h3>אינסטגרם</h3>
-            <a href="https://www.instagram.com/nave_b1936/" target="_blank">עקוב אחרינו באינסטגרם</a>
-            <form action="submit_form.php" method="post">
-                <label for="email">הכנס את כתובת האימייל שלך (לאימות):</label>
-                <input type="email" id="email" name="email" required>
-                <input type="submit" value="שלח">
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>צור קשר</h2>
+            <form action="https://formspree.io/f/mqkjgvlb" method="POST">
+                <label for="name">שם מלא:</label>
+                <input type="text" id="name" name="name" placeholder="הכנס שם מלא" required>
+
+                <label for="email">אימייל:</label>
+                <input type="email" id="email" name="email" placeholder="הכנס אימייל" required>
+
+                <label for="message">הודעה:</label>
+                <textarea id="message" name="message" placeholder="כתוב את ההודעה שלך" required></textarea>
+
+                <button type="submit" class="btn submit-btn">שלח הודעה</button>
             </form>
         </div>
-    </div>
+    </section>
 
-    <!-- Contact Section -->
-    <div class="contact-section" id="contact">
-        <h2>צור קשר</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">שם:</label>
-            <input type="text" id="name" name="name" placeholder="הכנס את שמך" required>
-            
-            <label for="email">אימייל:</label>
-            <input type="email" id="email" name="email" placeholder="הכנס את אימיילך" required>
-            
-            <label for="message">הודעה:</label>
-            <textarea id="message" name="message" placeholder="כתוב את ההודעה שלך כאן..." required></textarea>
-            
-            <input type="submit" value="שלח">
-        </form>
-    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 אתר שלי. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>© 2025 כל הזכויות שמורות ל-Julio</p>
-    </div>
-
+    <!-- Animaion JavaScript -->
+    <script src="scripts.js"></script>
 </body>
+
 </html>
