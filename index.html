@@ -3,86 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>האתר שלי</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header class="header">
-        <h1>ברוכים הבאים לאתר שלי</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">דף הבית</a></li>
-                <li><a href="#about">אודות</a></li>
-                <li><a href="#services">שירותים</a></li>
-                <li><a href="#contact">צור קשר</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <h1>שלום! זה האתר שלי.</h1>
-        <button>לחץ כאן כדי ללמוד יותר</button>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2>אודות</h2>
-        <p>ברוכים הבאים! באתר זה תוכלו למצוא את כל המידע אודות הפעילויות שלי.</p>
-    </section>
-
-    <!-- Social Links Section -->
-    <section id="services" class="services-section">
-        <h2>קישורים חשובים</h2>
-        <div class="service-item">
-            <h3>דיסקורד</h3>
-            <p><a href="https://discord.gg/TfnRUxH8Yz" target="_blank">הצטרף לדיסקורד שלי</a></p>
-        </div>
-        <div class="service-item">
-            <h3>יוטיוב</h3>
-            <p><a href="https://www.youtube.com/@Juliostime" target="_blank">צפה ביוטיוב</a></p>
-        </div>
-        <div class="service-item">
-            <h3>טיקטוק</h3>
-            <p><a href="https://www.tiktok.com/@julio._.s" target="_blank">עקוב אחריי בטיקטוק</a></p>
-        </div>
-        <div class="service-item">
-            <h3>אינסטגרם (דורש אימות אימייל)</h3>
-            <p>כדי לגשת לפרופיל אינסטגרם, אנא הוסף את כתובת האימייל שלך לצורך אימות:</p>
-            <form id="instagram-form">
-                <input type="email" id="email" placeholder="הזן את כתובת האימייל שלך" required>
-                <button type="submit">אמת את האימייל</button>
-            </form>
-            <p><a href="https://www.instagram.com/nave_b1936/" target="_blank">צפה באינסטגרם שלי</a></p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>צור קשר</h2>
-        <p>אם יש לך שאלות, אל תהסס ליצור קשר!</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 כל הזכויות שמורות</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="he">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אתר Julio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="logo">Julio</div>
+        <div class="logo">
+            <img src="logo.png" alt="לוגו האתר" width="50" height="50">
+            Julio
+        </div>
         <nav class="navbar">
             <ul>
                 <li><a href="#home">בית</a></li>
@@ -94,4 +24,60 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home" class
+    <section id="home" class="home-section">
+        <h1>ברוך הבא לאתר שלי</h1>
+        <button>התחל עכשיו</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>אודות</h2>
+        <p>שלום! אני Julio, ואני יוצר תוכן בתחום...</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>השירותים שלי</h2>
+        <div class="service-item">
+            <img src="discord-logo.png" alt="Discord" width="50" height="50">
+            <p>Discord</p>
+        </div>
+        <div class="service-item">
+            <img src="youtube-logo.png" alt="YouTube" width="50" height="50">
+            <p>YouTube</p>
+        </div>
+        <div class="service-item">
+            <img src="tiktok-logo.png" alt="TikTok" width="50" height="50">
+            <p>TikTok</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>צור קשר</h2>
+        <form action="" method="post">
+            <label for="name">שם מלא</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">אימייל</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">הודעה</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label for="instagram-verification">אני מאמת את כתובת האימייל שלי עבור אינסטגרם:</label>
+            <input type="checkbox" id="instagram-verification" name="instagram-verification" required>
+            <span>סמן כדי לאמת את האימייל</span>
+
+            <button type="submit">שלח</button>
+        </form>
+
+        <div class="social-links">
+            <a href="https://discord.gg/TfnRUxH8Yz" class="social-link discord">Discord</a>
+            <a href="https://www.youtube.com/@Juliostime" class="social-link youtube">YouTube</a>
+            <a href="https://www.tiktok.com/@julio._.s" class="social-link tiktok">TikTok</a>
+            <a href="https://www.instagram.com/nave_b1936/" class="social-link instagram">Instagram (דרוש אימות אימייל)</a>
+        </div>
+    </section>
+</body>
+</html>

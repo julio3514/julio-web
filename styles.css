@@ -9,12 +9,17 @@ body {
 
 /* Header */
 .header {
-    background-color: #333;
-    color: #fff;
+    background-color: #000; /* שחור */
+    color: #ffcc00; /* צהוב בהיר */
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .navbar ul {
@@ -28,15 +33,15 @@ body {
 }
 
 .navbar ul li a {
-    color: #fff;
+    color: #ffcc00; /* צהוב בהיר */
     text-decoration: none;
     font-size: 18px;
 }
 
 /* Home Section */
 .home-section {
-    background-color: #008CBA;
-    color: white;
+    background-color: #ffcc00; /* צהוב */
+    color: #000; /* שחור */
     text-align: center;
     padding: 50px 20px;
 }
@@ -46,8 +51,8 @@ body {
 }
 
 .home-section button {
-    background-color: #fff;
-    color: #008CBA;
+    background-color: #000; /* שחור */
+    color: #ffcc00; /* צהוב */
     padding: 10px 20px;
     border: none;
     font-size: 18px;
@@ -77,14 +82,13 @@ body {
 
 /* Services Section */
 .services-section {
-    background-color: #f4f4f4;
+    background-color: #e2e2e2;
     padding: 50px 20px;
 }
 
 .services-section h2 {
     text-align: center;
     font-size: 2.5em;
-    color: #f7c800; /* Yellow color */
 }
 
 .service-item {
@@ -93,33 +97,112 @@ body {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    border: 2px solid #333;
-}
-
-.service-item h3 {
-    color: #333;
-}
-
-.service-item a {
-    color: #f7c800; /* Yellow color */
-    text-decoration: none;
-}
-
-.service-item a:hover {
-    color: #333; /* Black color on hover */
 }
 
 /* Contact Section */
 .contact-section {
     padding: 50px 20px;
-    background-color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
 }
 
-/* Footer */
-footer {
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.discord {
+    background-color: #7289da;
+}
+
+.youtube {
+    background-color: #ff0000;
+}
+
+.tiktok {
+    background-color: #000000;
+}
+
+.instagram {
+    background-color: #e4405f;
+}
+
+.social-link:hover {
+    opacity: 0.8;
+}
+
+/* צבעים צהוב ושחור */
+body {
+    background-color: #ffcc00; /* צהוב */
+}
+
+.header {
+    background-color: #000; /* שחור */
+}
+
+.home-section {
+    background-color: #ffcc00; /* צהוב */
+    color: #000; /* שחור */
+}
+
+button {
+    background-color: #000; /* שחור */
+    color: #ffcc00; /* צהוב */
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.social-link:hover {
     background-color: #333;
-    color: #fff;
-    text-align: center;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
     padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ff9900;
 }
