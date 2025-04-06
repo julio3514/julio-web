@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  #social-links {
+    margin-top: 50px;
+  }
+  
+  #social-links a {
+    margin: 0 20px;
+    display: inline-block;
+  }
+  
+  #social-links img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  #social-links img:hover {
+    transform: scale(1.1);
+  }
+  
