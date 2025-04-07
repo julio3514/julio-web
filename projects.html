@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>הפרויקטים שלי - Julio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body dir="rtl">
+
+<header class="header">
+    <div class="logo">
+        <img src="discord-logo.png" alt="לוגו" width="50">
+        <span>Julio</span>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="julio.html">בית</a></li>
+            <li><a href="#projects">פרויקטים</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="projects" class="projects-section reveal">
+    <h2>הפרויקטים שלי</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="project1.png" alt="פרויקט 1">
+            <h3>בוט דיסקורד XP</h3>
+            <p>מערכת רמות + חנות XP עם Canvas</p>
+            <a href="#">לצפייה</a>
+        </div>
+
+        <div class="project-card">
+            <img src="project2.png" alt="פרויקט 2">
+            <h3>אתר אישי</h3>
+            <p>האתר שאתה רואה עכשיו – Julio Web 🔥</p>
+            <a href="#">צפה בקוד</a>
+        </div>
+
+        <!-- תוכל להוסיף עוד פרויקטים כאן -->
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 Julio. כל הזכויות שמורות.</p>
+</footer>
+
+<script>
+    ScrollReveal().reveal('.reveal', {
+        delay: 200,
+        distance: '40px',
+        origin: 'bottom',
+        duration: 1000,
+        easing: 'ease',
+        reset: false
+    });
+</script>
+
+</body>
+</html>
