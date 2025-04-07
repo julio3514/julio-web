@@ -3,21 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אתר Julio</title>
+    <title>אתר Julio - יצירת תוכן</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1d1d1d;
+            color: white;
+        }
+        header {
+            background: #ffcc00;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            font-size: 2em;
+            color: black;
+        }
+        .navbar {
+            margin-top: 20px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin-right: 30px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .navbar ul li a:hover {
+            color: #ffcc00;
+        }
+        .home-section {
+            background-image: url('background.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .home-section h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+        .home-section p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .glow-button {
+            background-color: #ffcc00;
+            color: black;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            background-color: black;
+            color: #ffcc00;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+        }
+        .about-section, .services-section, .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .about-section h2, .services-section h2, .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .service-item {
+            margin-bottom: 30px;
+        }
+        .service-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .social-links a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .social-link img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .social-links a:hover img {
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+            }
+            .home-section h1 {
+                font-size: 2.5em;
+            }
+            .about-section, .services-section, .contact-section {
+                padding: 30px 20px;
+            }
+            .service-item {
+                display: inline-block;
+                width: 45%;
+            }
+        }
     </style>
 </head>
-<body dir="rtl">
+<body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">
-            <img src="discord-logo.png" alt="לוגו האתר" width="50" height="50">
-            <span>Julio</span>
-        </div>
+    <header>
+        <div class="logo">Julio</div>
         <nav class="navbar">
             <ul>
                 <li><a href="#home">בית</a></li>
@@ -28,42 +160,34 @@
         </nav>
     </header>
 
-    <!-- עמוד נחיתה -->
-    <section id="home" class="home-section animated-landing">
-        <div class="landing-content">
-            <h1 class="fade-in">ברוך הבא לעולם של Julio</h1>
-            <p class="fade-in delay">התוכן הכי מטורף – במקום אחד!</p>
-            <a href="#about" class="glow-button">הכר אותי</a>
-        </div>
+    <section id="home" class="home-section">
+        <h1>ברוך הבא לעולם של Julio</h1>
+        <p>התוכן הכי מטורף – במקום אחד!</p>
+        <a href="#about" class="glow-button">הכר אותי</a>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section reveal">
+    <section id="about" class="about-section">
         <h2>אודות</h2>
         <p>שלום! אני Julio, יוצר תוכן בדיסקורד, יוטיוב וטיקטוק. המטרה שלי היא לשתף ידע, השראה וכיף עם כולם!</p>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section reveal">
+    <section id="services" class="services-section">
         <h2>השירותים שלי</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="discord-logo.png" alt="Discord">
-                <p>Discord</p>
-            </div>
-            <div class="service-item">
-                <img src="youtube-logo.png" alt="YouTube">
-                <p>YouTube</p>
-            </div>
-            <div class="service-item">
-                <img src="tiktok-logo.png" alt="TikTok">
-                <p>TikTok</p>
-            </div>
+        <div class="service-item">
+            <img src="discord-logo.png" alt="Discord">
+            <p>Discord</p>
+        </div>
+        <div class="service-item">
+            <img src="youtube-logo.png" alt="YouTube">
+            <p>YouTube</p>
+        </div>
+        <div class="service-item">
+            <img src="tiktok-logo.png" alt="TikTok">
+            <p>TikTok</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section reveal">
+    <section id="contact" class="contact-section">
         <h2>צור קשר</h2>
         <form action="" method="post">
             <label for="name">שם מלא</label>
@@ -75,40 +199,33 @@
             <label for="message">הודעה</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <div class="checkbox-container">
-                <input type="checkbox" id="instagram-verification" name="instagram-verification" required>
-                <label for="instagram-verification">אני מאמת את כתובת האימייל שלי עבור אינסטגרם</label>
-            </div>
-
             <button type="submit">שלח</button>
         </form>
 
         <div class="social-links">
             <a href="https://discord.gg/TfnRUxH8Yz" class="social-link">
-                <img src="discord-logo.png" alt="Discord" width="30"> Discord
+                <img src="discord-logo.png" alt="Discord"> Discord
             </a>
             <a href="https://www.youtube.com/@Juliostime" class="social-link">
-                <img src="youtube-logo.png" alt="YouTube" width="30"> YouTube
+                <img src="youtube-logo.png" alt="YouTube"> YouTube
             </a>
             <a href="https://www.tiktok.com/@julio._.s" class="social-link">
-                <img src="tiktok-logo.png" alt="TikTok" width="30"> TikTok
+                <img src="tiktok-logo.png" alt="TikTok"> TikTok
             </a>
             <a href="https://www.instagram.com/nave_b1936/" class="social-link">
-                <img src="instagram-logo.png" alt="Instagram" width="30"> Instagram (דורש אימות)
+                <img src="instagram-logo.png" alt="Instagram"> Instagram
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <p>&copy; 2025 Julio. כל הזכויות שמורות.</p>
     </footer>
 
-    <!-- ScrollReveal Init -->
     <script>
-        ScrollReveal().reveal('.reveal', {
+        ScrollReveal().reveal('.about-section, .services-section, .contact-section', {
             delay: 200,
-            distance: '40px',
+            distance: '50px',
             origin: 'bottom',
             duration: 1000,
             easing: 'ease',
@@ -118,4 +235,3 @@
 
 </body>
 </html>
-
