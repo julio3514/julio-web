@@ -15,18 +15,21 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1d1d1d;
+            background-color: #111;
             color: white;
         }
         header {
-            background: #ffcc00;
-            padding: 15px;
+            background-color: #FFCC00;
+            padding: 20px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .logo {
-            font-size: 2em;
+            font-size: 2.5em;
+            font-weight: bold;
             color: black;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         .navbar {
             margin-top: 20px;
@@ -39,60 +42,81 @@
         }
         .navbar ul li {
             margin-right: 30px;
+            transition: transform 0.3s ease;
         }
         .navbar ul li a {
             text-decoration: none;
             color: black;
-            font-size: 1.2em;
+            font-size: 1.3em;
+            font-weight: bold;
+            letter-spacing: 1px;
             transition: color 0.3s ease;
         }
         .navbar ul li a:hover {
             color: #ffcc00;
         }
+        .navbar ul li:hover {
+            transform: scale(1.1);
+        }
         .home-section {
             background-image: url('background.jpg');
             background-size: cover;
+            background-position: center;
             text-align: center;
-            padding: 100px 20px;
+            padding: 150px 20px;
         }
         .home-section h1 {
             font-size: 4em;
             margin-bottom: 20px;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+            color: #ffcc00;
         }
         .home-section p {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 40px;
         }
         .glow-button {
-            background-color: #ffcc00;
+            background-color: #FFCC00;
             color: black;
             padding: 15px 30px;
-            font-size: 1.2em;
+            font-size: 1.5em;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
         }
         .glow-button:hover {
             background-color: black;
-            color: #ffcc00;
-            box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+            color: #FFCC00;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.9);
         }
         .about-section, .services-section, .contact-section {
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
         .about-section h2, .services-section h2, .contact-section h2 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 20px;
+            color: #FFCC00;
         }
         .about-section p {
-            font-size: 1.2em;
+            font-size: 1.4em;
             max-width: 800px;
             margin: 0 auto;
         }
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
         .service-item {
-            margin-bottom: 30px;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
         }
         .service-item img {
             width: 80px;
@@ -129,21 +153,64 @@
         .social-links a:hover img {
             transform: scale(1.1);
         }
+        .contact-form {
+            width: 60%;
+            margin: 0 auto;
+        }
+        .contact-form label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 2px solid #333;
+            background-color: #222;
+            color: white;
+        }
+        .contact-form button {
+            background-color: #FFCC00;
+            color: black;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: black;
+            color: #FFCC00;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.9);
+        }
+        .contact-form textarea {
+            height: 150px;
+        }
+
         @media (max-width: 768px) {
             .navbar ul {
                 flex-direction: column;
+                align-items: center;
             }
             .home-section h1 {
                 font-size: 2.5em;
             }
             .about-section, .services-section, .contact-section {
-                padding: 30px 20px;
+                padding: 40px 20px;
             }
-            .service-item {
-                display: inline-block;
-                width: 45%;
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-form {
+                width: 90%;
             }
         }
+
     </style>
 </head>
 <body>
@@ -173,23 +240,25 @@
 
     <section id="services" class="services-section">
         <h2>השירותים שלי</h2>
-        <div class="service-item">
-            <img src="discord-logo.png" alt="Discord">
-            <p>Discord</p>
-        </div>
-        <div class="service-item">
-            <img src="youtube-logo.png" alt="YouTube">
-            <p>YouTube</p>
-        </div>
-        <div class="service-item">
-            <img src="tiktok-logo.png" alt="TikTok">
-            <p>TikTok</p>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="discord-logo.png" alt="Discord">
+                <p>Discord</p>
+            </div>
+            <div class="service-item">
+                <img src="youtube-logo.png" alt="YouTube">
+                <p>YouTube</p>
+            </div>
+            <div class="service-item">
+                <img src="tiktok-logo.png" alt="TikTok">
+                <p>TikTok</p>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
         <h2>צור קשר</h2>
-        <form action="" method="post">
+        <form action="" method="post" class="contact-form">
             <label for="name">שם מלא</label>
             <input type="text" id="name" name="name" required>
 
@@ -199,21 +268,26 @@
             <label for="message">הודעה</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
+            <div class="checkbox-container">
+                <input type="checkbox" id="instagram-verification" name="instagram-verification" required>
+                <label for="instagram-verification">אני מאמת את כתובת האימייל שלי עבור אינסטגרם</label>
+            </div>
+
             <button type="submit">שלח</button>
         </form>
 
         <div class="social-links">
             <a href="https://discord.gg/TfnRUxH8Yz" class="social-link">
-                <img src="discord-logo.png" alt="Discord"> Discord
+                <img src="discord-logo.png" alt="Discord" width="30"> Discord
             </a>
             <a href="https://www.youtube.com/@Juliostime" class="social-link">
-                <img src="youtube-logo.png" alt="YouTube"> YouTube
+                <img src="youtube-logo.png" alt="YouTube" width="30"> YouTube
             </a>
             <a href="https://www.tiktok.com/@julio._.s" class="social-link">
-                <img src="tiktok-logo.png" alt="TikTok"> TikTok
+                <img src="tiktok-logo.png" alt="TikTok" width="30"> TikTok
             </a>
             <a href="https://www.instagram.com/nave_b1936/" class="social-link">
-                <img src="instagram-logo.png" alt="Instagram"> Instagram
+                <img src="instagram-logo.png" alt="Instagram" width="30"> Instagram (דורש אימות)
             </a>
         </div>
     </section>
@@ -223,9 +297,27 @@
     </footer>
 
     <script>
-        ScrollReveal().reveal('.about-section, .services-section, .contact-section', {
+        ScrollReveal().reveal('.about-section', {
             delay: 200,
-            distance: '50px',
+            distance: '40px',
+            origin: 'bottom',
+            duration: 1000,
+            easing: 'ease',
+            reset: false
+        });
+
+        ScrollReveal().reveal('.services-section', {
+            delay: 200,
+            distance: '40px',
+            origin: 'bottom',
+            duration: 1000,
+            easing: 'ease',
+            reset: false
+        });
+
+        ScrollReveal().reveal('.contact-section', {
+            delay: 200,
+            distance: '40px',
             origin: 'bottom',
             duration: 1000,
             easing: 'ease',
