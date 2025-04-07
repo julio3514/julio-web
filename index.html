@@ -6,7 +6,6 @@
     <title>אתר Julio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 for better alerts -->
     <style>
         html { scroll-behavior: smooth; }
     </style>
@@ -66,7 +65,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section reveal">
         <h2>צור קשר</h2>
-        <form id="contact-form">
+        <form action="" method="post">
             <label for="name">שם מלא</label>
             <input type="text" id="name" name="name" required>
 
@@ -115,32 +114,8 @@
             easing: 'ease',
             reset: false
         });
-
-        // SweetAlert2 for form submission
-        const form = document.getElementById('contact-form');
-        form.addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent the default form submission
-            const email = document.getElementById('email').value;
-            const instagramVerified = document.getElementById('instagram-verification').checked;
-
-            if (instagramVerified) {
-                // Simulating email validation for Instagram verification
-                Swal.fire({
-                    title: 'תודה על ההודעה!',
-                    text: 'הודעתך נשלחה בהצלחה.',
-                    icon: 'success',
-                    confirmButtonText: 'אישור'
-                });
-            } else {
-                Swal.fire({
-                    title: 'שגיאה!',
-                    text: 'עליך לאמת את כתובת האימייל שלך לאינסטגרם.',
-                    icon: 'error',
-                    confirmButtonText: 'אישור'
-                });
-            }
-        });
     </script>
 
 </body>
 </html>
+
